@@ -1,7 +1,8 @@
 Öğrenci No:250541063
-AD-SOYAD:
-FATMA TÜRKMEN
+AD-SOYAD:FATMA TÜRKMEN
+
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
 Üretken algoritma yapma ödevim var ve ideal kahve yapma algoritması yapar mısın 
 
 [Başla]
