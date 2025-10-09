@@ -2,7 +2,7 @@
 AD-SOYAD:FATMA TÜRKMEN 
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
-
+Algoritma ödevim var renk karıştırma algoritmasını yapar mısın ? 
 Başla
    ↓
 Rastgele hedef renk seç (R,G,B)
@@ -23,4 +23,19 @@ Tebrikler!             İpucu ver
 Puan hesapla           Tekrar tahmin iste
  ↓                     ↑
 Oyun bitir   ←─────────┘
- algoritmaya ek olarak  döngüleri arttırılabilir ve fiziksel boya karışımını simüle edebiliriz .
+
+
+PSEUDOCODE:
+
+Başla
+  R1, G1, B1 ← kullanıcıdan al
+  R2, G2, B2 ← kullanıcıdan al
+
+  R3 ← (R1 + R2) / 2
+  G3 ← (G1 + G2) / 2
+  B3 ← (B1 + B2) / 2
+
+  yaz("Yeni Renk: ", R3, G3, B3)
+
+BitiR
+algoritmaya ek olarak  döngüleri arttırılabilir ve fiziksel boya karışımını simüle edebiliriz .
