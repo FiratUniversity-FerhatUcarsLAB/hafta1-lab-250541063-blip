@@ -1,4 +1,36 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541063
+AD-SOYAD:fatma türkmen
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+merhaba , yazılım  mühendisliği okuyorum ve algoritma dersim var bana sınava çalışma planının algoritmasını yapar mısın?
+1. Başla
+
+2. Sınav tarihini ve bugünün tarihini al
+   - kalan_gün = sınav_tarihi - bugünün_tarihi
+
+3. Konu listesini al ve her konunun zorluk seviyesini belirle (Kolay, Orta, Zor)
+
+4. Her güne ayırabileceğin çalışma süresini belirle (örneğin: 3 saat/gün)
+
+5. Her konunun tahmini çalışma süresini belirle:
+   - Kolay konu: 1 saat
+   - Orta konu: 2 saat
+   - Zor konu: 3 saat
+
+6. Tüm konular için toplam süreyi hesapla
+
+7. Çalışma planını günlere dağıt:
+   a. İlk günlerden itibaren zor konuları yerleştir
+   b. Ardından orta, sonra kolay konuları dağıt
+   c. Her 3 günde bir tekrar ve soru çözme günü ekle
+   d. Sınavdan 1 gün önce "Genel Tekrar Günü" olarak ayır
+
+8. Her gün için:
+   - Hangi konular çalışılacak?
+   - Kaç saat ayrılacak?
+   - Kaynak ne olacak? (Not, video, kitap)
+
+9. Programı takvime yaz ve günlük kontrol et
+
+10. Bitti
+algoritmaya ek olarak özet çıkarılabilir ve test hazırlanbilir
