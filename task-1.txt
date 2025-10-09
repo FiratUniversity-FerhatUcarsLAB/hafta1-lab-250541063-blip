@@ -35,6 +35,7 @@ merhaba , yazılım  mühendisliği okuyorum ve algoritma dersim var bana sınav
 10. Plan tamamlandı mesajı göster.
 
 11. Bitir.
+Algoritmaya ek olarak istatiksel analiz yapılabilir ve otaamtik ayarlama algoritması geliştirilebilir bu sayede kalan güne göre yeniden program oluşturulabilir 
 
 PESUEDOCODE :
 
