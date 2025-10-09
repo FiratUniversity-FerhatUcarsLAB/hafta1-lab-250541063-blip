@@ -1,5 +1,5 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541063
+AD-SOYAD:FATMA TÜRKMEN 
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 
