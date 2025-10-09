@@ -1,4 +1,27 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541063
+AD-SOYAD:Fatma TÜRKMEN 
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+merhaba ,yazılım mühendisliği öğrencisiyim ve algoritma ödevim var tic-tac toe kazanma stratejisinin algoritmasını oluşturur musun?
+1. Başla
+
+2. Eğer merkez (1,1) boşsa, oraya oyna (çünkü en stratejik kare merkezdir)
+
+3. Eğer kazanma ihtimali varsa, kazan:
+   - Tüm satır, sütun ve çaprazları kontrol et
+   - Eğer iki kendi taşın ve bir boşluk varsa → boş kareye kendi taşını koy ve kazan
+
+4. Eğer rakip kazanmak üzereyse, engelle:
+   - Tüm satır, sütun ve çaprazları kontrol et
+   - Eğer iki rakip taşı ve bir boşluk varsa → orayı kapat
+
+5. Köşelerden biri boşsa, oraya oyna (çaprazları oluşturmak için önemlidir):
+   - (0,0), (0,2), (2,0), (2,2)
+
+6. Ortadaki kenar karelerden biri boşsa, oraya oyna:
+   - (0,1), (1,0), (1,2), (2,1)
+
+7. Tüm kareler doluysa ve kimse kazanmadıysa → beraberlik
+
+8. Bitir
+
