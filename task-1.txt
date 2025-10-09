@@ -3,34 +3,53 @@ AD-SOYAD:fatma türkmen
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 merhaba , yazılım  mühendisliği okuyorum ve algoritma dersim var bana sınava çalışma planının algoritmasını yapar mısın?
-1. Başla
+1. Başlat
 
-2. Sınav tarihini ve bugünün tarihini al
-   - kalan_gün = sınav_tarihi - bugünün_tarihi
+2. Kullanıcıdan giriş bilgilerini al:
+      sınavTarihi, bugününTarihi, konuListesi, konuZorlukları, günlükÇalışmaSaati
 
-3. Konu listesini al ve her konunun zorluk seviyesini belirle (Kolay, Orta, Zor)
+3. Kalan gün sayısını hesapla:
+      kalanGün = sınavTarihi - bugününTarihi
 
-4. Her güne ayırabileceğin çalışma süresini belirle (örneğin: 3 saat/gün)
+4. Toplam zorluk puanını hesapla:
+      toplamZorluk = tüm(konuZorlukları) toplamı
 
-5. Her konunun tahmini çalışma süresini belirle:
-   - Kolay konu: 1 saat
-   - Orta konu: 2 saat
-   - Zor konu: 3 saat
+5. Her konunun çalışma süresini belirle:
+      herKonuSaati = (konuZorluk / toplamZorluk) * (kalanGün * günlükÇalışmaSaati)
 
-6. Tüm konular için toplam süreyi hesapla
+6. Günlük planı oluştur:
+      her gün için:
+         - o gün çalışılacak konuyu sırayla ata
+         - o konuya ait kalan saat varsa, o güne saat ayır
+         - günlük saat dolduğunda sonraki güne geç
 
-7. Çalışma planını günlere dağıt:
-   a. İlk günlerden itibaren zor konuları yerleştir
-   b. Ardından orta, sonra kolay konuları dağıt
-   c. Her 3 günde bir tekrar ve soru çözme günü ekle
-   d. Sınavdan 1 gün önce "Genel Tekrar Günü" olarak ayır
+7. Tekrar günleri planla:
+      - her 4 günde 1 “tekrar günü” ekle
+      - bu günlerde önceki 3 günün konularını kısa tekrar olarak bölüştür
 
-8. Her gün için:
-   - Hangi konular çalışılacak?
-   - Kaç saat ayrılacak?
-   - Kaynak ne olacak? (Not, video, kitap)
+8. Planı tablo halinde yazdır:
+      Gün No | Tarih | Konu | Süre (saat) | Tür (Yeni / Tekrar)
 
-9. Programı takvime yaz ve günlük kontrol et
+9. Toplam çalışma saati = kalanGün * günlükÇalışmaSaati
 
-10. Bitti
-algoritmaya ek olarak özet çıkarılabilir ve test hazırlanbilir
+10. Plan tamamlandı mesajı göster.
+
+11. Bitir.
+
+PESUEDOCODE :
+
+Başla
+  input sınavTarihi, bugününTarihi, konular[], zorluk[], günlükSaat
+  kalanGün = sınavTarihi - bugününTarihi
+  toplamZorluk = sum(zorluk)
+  for her konu in konular:
+       konuSaat[konu] = (zorluk[konu] / toplamZorluk) * (kalanGün * günlükSaat)
+  plan = []
+  for gün in range(1, kalanGün+1):
+       if gün % 4 == 0:
+           plan.append(("Tekrar", 4))
+       else:
+           sıradakiKonu = konular[gün % len(konular)]
+           plan.append((sıradakiKonu, günlükSaat))
+  print(plan)
+Bitir
