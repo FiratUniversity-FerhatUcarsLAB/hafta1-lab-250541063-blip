@@ -1,4 +1,28 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541063
+AD-SOYAD:fatma türkmen 
 
-Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:.
+merhaba , veri organizasyonu düzenleme algoritması ödevim var bana müzik koleksiyonumu düzenleme algoritması yapar mısın?
+1. Başla
+
+2. Müzik koleksiyonunu yükle (şarkılar listesi)
+
+3. Kullanıcıdan nasıl düzenlemek istediğini sor:
+   a. Sıralama kriteri nedir? (örneğin: yıla göre, ada göre)
+   b. Gruplama istiyor mu? (evet → sanatçı, tür, albüm)
+   c. Filtreleme istiyor mu? (evet → sadece favoriler, belirli tür)
+
+4. Eğer filtreleme istiyorsa:
+   - Belirtilen filtreye göre koleksiyonu daralt
+
+5. Eğer sıralama istiyorsa:
+   - Belirtilen kritere göre koleksiyonu sırala
+     (örneğin: yıla göre artan)
+
+6. Eğer gruplama istiyorsa:
+   - Her grup için ayrı liste oluştur (örneğin: her sanatçı için liste)
+
+7. Düzenlenmiş listeyi göster / kaydet
+
+8. Bitir
+algoritmaya ek olarak yerli yabancı müzikleri ayırabilir 
