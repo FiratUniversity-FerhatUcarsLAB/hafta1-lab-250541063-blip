@@ -1,4 +1,63 @@
-Öğrenci No:
+Öğrenci No:250541063
 AD-SOYAD:
-
+FATMA TÜRKMEN
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Üretken algoritma yapma ödevim var ve ideal kahve yapma algoritması yapar mısın 
+
+[Başla]
+   ↓
+[Kahve türü seç]
+   ↓
+[Malzemeleri kontrol et]
+   ↘ Eksik → [Durdur]
+   ↓
+[Su ısıt]
+   ↓
+{Tür seçimine göre dal}
+   → Türk kahvesi: [Cezvede pişir]
+   → Filtre kahve: [Demle]
+   → Espresso: [Makine ile hazırla]
+   ↓
+[İsteğe göre süt/şeker ekle]
+   ↓
+[Kahveyi fincana dök]
+   ↓
+[Afiyet olsun]
+   ↓
+[Bitiş]
+
+PSEUDOCODE: 
+
+ALGORITMA IdealKahveYapma
+BAŞLA
+    Yaz "Kahve türünü seçiniz: Türk, Filtre, Espresso"
+    Oku kahve_turu
+
+    Yaz "Malzemeler kontrol ediliyor..."
+    Eğer kahve_ve_su_var_mi = HAYIR ise
+        Yaz "Malzeme eksik!"
+        Bitir
+    SON
+
+    Yaz "Su ısıtılıyor..."
+    su_sicakligi ← 95
+
+    Eğer kahve_turu = "Türk" ise
+        Yaz "Cezveye kahve ve su koy, isteğe göre şeker ekle"
+        Yaz "Ocağa koy ve taşmadan pişir"
+    Aksi halde eğer kahve_turu = "Filtre" ise
+        Yaz "Filtre kağıdını yerleştir, kahveyi koy, sıcak suyu yavaşça dök"
+    Aksi halde eğer kahve_turu = "Espresso" ise
+        Yaz "Makineye kahve koy, basınçlı su ile 25 sn demle"
+    SON
+
+    Yaz "Kahve fincana dökülüyor..."
+    Yaz "Süt/şeker eklensin mi?"
+    Oku ekle
+    Eğer ekle = EVET ise
+        Yaz "Süt/şeker ekleniyor..."
+    SON
+
+    Yaz "Kahve hazır, afiyet olsun!"
+BİTİR
+Algoritmaya ek olarak kullanıcıdan sertlik ile ilgili bilgi alınıp algoritma geliştirilebilir .
