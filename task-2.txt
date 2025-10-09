@@ -3,25 +3,61 @@ AD-SOYAD:Fatma TÜRKMEN
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 merhaba ,yazılım mühendisliği öğrencisiyim ve algoritma ödevim var tic-tac toe kazanma stratejisinin algoritmasını oluşturur musun?
-1. Başla
+1. Başlat
 
-2. Eğer merkez (1,1) boşsa, oraya oyna (çünkü en stratejik kare merkezdir)
+2. 3x3 boş oyun tahtası oluştur.
+      board = [ [' ', ' ', ' '],
+                [' ', ' ', ' '],
+                [' ', ' ', ' '] ]
 
-3. Eğer kazanma ihtimali varsa, kazan:
-   - Tüm satır, sütun ve çaprazları kontrol et
-   - Eğer iki kendi taşın ve bir boşluk varsa → boş kareye kendi taşını koy ve kazan
+3. Oyuncu1 = 'X', Oyuncu2 = 'O'
+   aktifOyuncu = Oyuncu1
 
-4. Eğer rakip kazanmak üzereyse, engelle:
-   - Tüm satır, sütun ve çaprazları kontrol et
-   - Eğer iki rakip taşı ve bir boşluk varsa → orayı kapat
+4. Oyun bitene kadar tekrarla:
+      a) Tahtayı ekrana yazdır.
+      b) aktifOyuncudan hamle iste:
+           - satır (0-2) ve sütun (0-2) girsin.
+      c) Eğer hücre boşsa:
+             board[satır][sütun] = aktifOyuncu
+         değilse:
+             “Geçersiz hamle” mesajı → aynı oyuncu tekrar dener.
+      d) Kazanma kontrolü yap:
+             Eğer aktifOyuncu’nun 3 işareti yatay, dikey veya çaprazda varsa:
+                  “aktifOyuncu kazandı” → oyun bitir.
+      e) Eğer tüm hücreler doluysa:
+             “Berabere!” → oyun bitir.
+      f) Oyuncu değiştir:
+             Eğer aktifOyuncu == Oyuncu1 → aktifOyuncu = Oyuncu2
+             aksi halde → aktifOyuncu = Oyuncu1
 
-5. Köşelerden biri boşsa, oraya oyna (çaprazları oluşturmak için önemlidir):
-   - (0,0), (0,2), (2,0), (2,2)
+5. Oyun sonu mesajı yazdır.
 
-6. Ortadaki kenar karelerden biri boşsa, oraya oyna:
-   - (0,1), (1,0), (1,2), (2,1)
+6. Bitir.
 
-7. Tüm kareler doluysa ve kimse kazanmadıysa → beraberlik
+PSEUDOCODE:
+BAŞLA
+  Tahtayı boş olarak oluştur
+  Oyuncu1 = X, Oyuncu2 = O
+  aktifOyuncu = Oyuncu1
 
-8. Bitir
+  TEKRARLA
+    Tahtayı yazdır
+    aktifOyuncudan satır ve sütun iste
+    Eğer hücre boş ise
+        tahtaya aktifOyuncu’yu yerleştir
+    DEĞİLSE
+        “Geçersiz hamle” yaz ve aynı oyuncu tekrar oyna
 
+    Eğer aktifOyuncu kazandıysa
+        “Kazanan: aktifOyuncu” yaz
+        Oyun bitir
+
+    Eğer tahta doluysa
+        “Berabere” yaz
+        Oyun bitir
+
+    Oyuncu değiştir
+
+  SONRAKİ TUR
+BİTIR 
+Algoritmaya ek olarak tekrar oynama seçeneği eklenebiir ,hatalı giriş (dolu hücreye hamle ) olduğunda uyarı mesajı verebilir.
