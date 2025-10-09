@@ -3,26 +3,84 @@ AD-SOYAD:fatma türkmen
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:.
 merhaba , veri organizasyonu düzenleme algoritması ödevim var bana müzik koleksiyonumu düzenleme algoritması yapar mısın?
-1. Başla
+1. Başlat
 
-2. Müzik koleksiyonunu yükle (şarkılar listesi)
+2. Müzik koleksiyonunu veri yapısında tut:
+   Örnek: Liste veya tablo
+   müzikListesi = [
+      {"ad": "Shape of You", "sanatçı": "Ed Sheeran", "tür": "Pop", "yıl": 2017, "süre": 4.2},
+      {"ad": "Smells Like Teen Spirit", "sanatçı": "Nirvana", "tür": "Rock", "yıl": 1991, "süre": 5.0},
+      ...
+   ]
 
-3. Kullanıcıdan nasıl düzenlemek istediğini sor:
-   a. Sıralama kriteri nedir? (örneğin: yıla göre, ada göre)
-   b. Gruplama istiyor mu? (evet → sanatçı, tür, albüm)
-   c. Filtreleme istiyor mu? (evet → sadece favoriler, belirli tür)
+3. Kullanıcıdan işlem seçimi iste:
+      1 → Türüne göre sırala
+      2 → Sanatçıya göre sırala
+      3 → Yıla göre sırala
+      4 → Filtrele (örnek: sadece Pop)
+      5 → Yeni şarkı ekle
+      6 → Şarkı sil
+      7 → Çıkış
 
-4. Eğer filtreleme istiyorsa:
-   - Belirtilen filtreye göre koleksiyonu daralt
+4. Seçime göre işlem yap:
 
-5. Eğer sıralama istiyorsa:
-   - Belirtilen kritere göre koleksiyonu sırala
-     (örneğin: yıla göre artan)
+   Eğer seçim == 1:
+       müzikListesi’ni “tür” alanına göre alfabetik sırala
 
-6. Eğer gruplama istiyorsa:
-   - Her grup için ayrı liste oluştur (örneğin: her sanatçı için liste)
+   Eğer seçim == 2:
+       müzikListesi’ni “sanatçı” alanına göre sırala
 
-7. Düzenlenmiş listeyi göster / kaydet
+   Eğer seçim == 3:
+       müzikListesi’ni “yıl” değerine göre artan sırala
 
-8. Bitir
-algoritmaya ek olarak yerli yabancı müzikleri ayırabilir 
+   Eğer seçim == 4:
+       kullanıcıdan filtreTür al
+       sadece o türe ait şarkıları yeniListe’ye ekle
+       yeniListe’yi göster
+
+   Eğer seçim == 5:
+       kullanıcıdan yeni şarkı bilgileri al (ad, sanatçı, tür, yıl, süre)
+       listeye ekle
+
+   Eğer seçim == 6:
+       silinecek şarkı adını al
+       listedeki eşleşeni kaldır
+
+   Eğer seçim == 7:
+       “Program sonlandı” yaz ve bitir
+
+5. Her işlemden sonra kullanıcıya sonucu göster.
+
+6. İsterse başka işlem yap.
+
+7. Bitir.
+
+PSEUDOCODE:
+
+BAŞLA
+  müzikListesi = []
+  
+  TEKRARLA
+     kullanıcıdan seçim al
+     
+     EĞER seçim == "Sırala":
+         kritere göre sırala (ad, sanatçı, yıl)
+     
+     EĞER seçim == "Filtrele":
+         kriterGir = input("Hangi tür?")
+         liste = filtrele(müzikListesi, kriterGir)
+     
+     EĞER seçim == "Ekle":
+         yeniŞarkı = input()
+         müzikListesi.append(yeniŞarkı)
+     
+     EĞER seçim == "Sil":
+         silinecekAd = input()
+         müzikListesi.remove(silinecekAd)
+     
+     EĞER seçim == "Çık":
+         DUR
+
+  BİTİR
+
+Algoritmaya ek olarak yerli yabancı müzikleri ayırabilir ve algoritma dinleyenlerin dinledikleri türde müzik önerebilir .
