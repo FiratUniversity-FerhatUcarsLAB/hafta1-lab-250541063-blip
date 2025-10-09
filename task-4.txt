@@ -2,3 +2,25 @@
 AD-SOYAD:
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
+Başla
+   ↓
+Rastgele hedef renk seç (R,G,B)
+   ↓
+deneme = 0
+   ↓
+Tahmin al (R,G,B)
+   ↓
+deneme = deneme + 1
+   ↓
+fark = DeltaE(hedef, tahmin)
+   ↓
+fark ≤ tolerance ?
+   ↙                ↘
+Evet                 Hayır
+ ↓                     ↓
+Tebrikler!             İpucu ver
+Puan hesapla           Tekrar tahmin iste
+ ↓                     ↑
+Oyun bitir   ←─────────┘
+ algoritmaya ek olarak  döngüleri arttırılabilir ve fiziksel boya karışımını simüle edebiliriz .
